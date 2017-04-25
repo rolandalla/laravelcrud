@@ -1,0 +1,13 @@
+{
+    "name": "roland/crud",
+    "description": "This is a CRUD generator for Laravel 5.4",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Roland Alla",
+            "email": "alla.roland@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {}
+}

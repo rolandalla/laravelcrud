@@ -1,0 +1,120 @@
+<?php
+
+namespace DummyNamespace;
+
+use DummyRootNamespaceHttp\Requests;
+use DummyRootNamespaceHttp\Controllers\Controller;
+
+use DummyRootNamespace{{modelName}};
+use Illuminate\Http\Request;
+use Carbon\Carbon;
+use Session;
+
+class DummyClass extends Controller
+{
+
+    /**
+     * Display a listing of the resource.
+     *
+     * @return Response
+     */
+    public function index()
+    {
+        ${{crudName}} = {{modelName}}::all();
+
+        return view('backEnd.{{viewPath}}{{crudName}}.index', compact('{{crudName}}'));
+    }
+
+    /**
+     * Show the form for creating a new resource.
+     *
+     * @return Response
+     */
+    public function create()
+    {
+        return view('backEnd.{{viewPath}}{{crudName}}.create');
+    }
+
+    /**
+     * Store a newly created resource in storage.
+     *
+     * @return Response
+     */
+    public function store(Request $request)
+    {
+        {{validationRules}}
+        {{modelName}}::create($request->all());
+
+        Session::flash('message', '{{modelName}} added!');
+        Session::flash('status', 'success');
+
+        return redirect('{{routeGroup}}{{crudName}}');
+    }
+
+    /**
+     * Display the specified resource.
+     *
+     * @param  int  $id
+     *
+     * @return Response
+     */
+    public function show($id)
+    {
+        ${{crudNameSingular}} = {{modelName}}::findOrFail($id);
+
+        return view('backEnd.{{viewPath}}{{crudName}}.show', compact('{{crudNameSingular}}'));
+    }
+
+    /**
+     * Show the form for editing the specified resource.
+     *
+     * @param  int  $id
+     *
+     * @return Response
+     */
+    public function edit($id)
+    {
+        ${{crudNameSingular}} = {{modelName}}::findOrFail($id);
+
+        return view('backEnd.{{viewPath}}{{crudName}}.edit', compact('{{crudNameSingular}}'));
+    }
+
+    /**
+     * Update the specified resource in storage.
+     *
+     * @param  int  $id
+     *
+     * @return Response
+     */
+    public function update($id, Request $request)
+    {
+        {{validationRules}}
+        ${{crudNameSingular}} = {{modelName}}::findOrFail($id);
+        ${{crudNameSingular}}->update($request->all());
+
+        Session::flash('message', '{{modelName}} updated!');
+        Session::flash('status', 'success');
+
+        return redirect('{{routeGroup}}{{crudName}}');
+    }
+
+    /**
+     * Remove the specified resource from storage.
+     *
+     * @param  int  $id
+     *
+     * @return Response
+     */
+    public function destroy($id)
+    {
+        ${{crudNameSingular}} = {{modelName}}::findOrFail($id);
+
+        ${{crudNameSingular}}->delete();
+
+        Session::flash('message', '{{modelName}} deleted!');
+        Session::flash('status', 'success');
+
+        return redirect('{{routeGroup}}{{crudName}}');
+    }
+
+}

@@ -1,0 +1,24 @@
+@extends('backLayout.app')
+@section('title')
+%%modelName%%
+@stop
+
+@section('content')
+
+    <h1>%%modelName%%</h1>
+    <div class="table-responsive">
+        <table class="table table-bordered table-striped table-hover">
+            <thead>
+                <tr>
+                    <th>ID.</th> %%formHeadingHtml%%
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>{{ $%%crudNameSingular%%->id }}</td> %%formBodyHtml%%
+                </tr>
+            </tbody>    
+        </table>
+    </div>
+
+@endsection

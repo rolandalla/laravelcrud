@@ -1,0 +1,55 @@
+@extends('backLayout.app')
+@section('title')
+%%modelName%%
+@stop
+
+@section('content')
+
+    <h1>%%crudNameCap%% <a href="{{ url('%%routeGroup%%%%crudName%%/create') }}" class="btn btn-primary pull-right btn-sm">Add New %%modelName%%</a></h1>
+    <div class="table table-responsive">
+        <table class="table table-bordered table-striped table-hover" id="tbl%%routeGroup%%%%crudName%%">
+            <thead>
+                <tr>
+                    <th>ID</th>%%formHeadingHtml%%<th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+            {{-- */$x=0;/* --}}
+            @foreach($%%crudName%% as $item)
+                {{-- */$x++;/* --}}
+                <tr>
+                    <td>{{ $x }}</td>
+                    %%formBodyHtml%%
+                    <td>
+                        <a href="{{ url('%%routeGroup%%%%crudName%%/' . $item->id . '/edit') }}" class="btn btn-primary btn-xs">Update</a> 
+                        {!! Form::open([
+                            'method'=>'DELETE',
+                            'url' => ['%%routeGroup%%%%crudName%%', $item->id],
+                            'style' => 'display:inline'
+                        ]) !!}
+                            {!! Form::submit('Delete', ['class' => 'btn btn-danger btn-xs']) !!}
+                        {!! Form::close() !!}
+                    </td>
+                </tr>
+            @endforeach
+            </tbody>
+        </table>
+    </div>
+
+@endsection
+
+@section('scripts')
+<script type="text/javascript">
+    $(document).ready(function(){
+        $('#tbl%%routeGroup%%%%crudName%%').DataTable({
+            columnDefs: [{
+                targets: [0],
+                visible: false,
+                searchable: false
+                },
+            ],
+            order: [[0, "asc"]],
+        });
+    });
+</script>
+@endsection
