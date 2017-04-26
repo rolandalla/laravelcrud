@@ -14,11 +14,9 @@
                 </tr>
             </thead>
             <tbody>
-            {{-- */$x=0;/* --}}
             @foreach($%%crudName%% as $item)
-                {{-- */$x++;/* --}}
                 <tr>
-                    <td>{{ $x }}</td>
+                    <td>{{ $item->id }}</td>
                     %%formBodyHtml%%
                     <td>
                         <a href="{{ url('%%routeGroup%%%%crudName%%/' . $item->id . '/edit') }}" class="btn btn-primary btn-xs">Update</a> 
