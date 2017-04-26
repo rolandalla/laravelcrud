@@ -94,7 +94,7 @@ class CrudCommand extends Command
         $this->callSilent('optimize');
 
         // Updating the Http/routes.php file old laravels app_path('Http/routes.php')
-        $routeFile = config('crudgenerator.route'); ; //change it to config file
+        $routeFile = config('crudgenerator.route'); //change it to config file
         if (file_exists($routeFile) && (strtolower($this->option('route')) === 'yes')) {
             $this->controller = ($controllerNamespace != '') ? $controllerNamespace . '\\' . $name . 'Controller' : $name . 'Controller';
 

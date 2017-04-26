@@ -24,12 +24,38 @@ Laravel CRUD Generator
 
 3. Publish config file & generator template files.
     ```
-    php artisan vendor:publish
+    php artisan vendor:publish --provider="Roland\Crud\CrudServiceProvider"
     ```
 4. All Done.
     ```
     Your Crud Generator is Installed :)
     ```
+
+### Otional
+
+1. Install **laravelcollective/html** helper package if you haven't installed it already.
+    * Run
+
+    ```
+    composer require laravelcollective/html
+    ```
+
+    * Add service provider & aliases to **config/app.php**.
+    ```php
+    'providers' => [
+        ...
+
+        Collective\Html\HtmlServiceProvider::class,
+    ],
+
+    'aliases' => [
+        ...
+
+        'Form' => Collective\Html\FormFacade::class,
+        'HTML' => Collective\Html\HtmlFacade::class,
+    ],
+    ```
+2. Run ```composer dump-autoload```
 
 Note: You should have configured database for this operation.
 

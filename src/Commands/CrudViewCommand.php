@@ -261,7 +261,7 @@ class CrudViewCommand extends Command
         }
 
         // For layouts/master.blade.php file
-        $layoutsDirPath = base_path('resources/views/layouts/');
+        $layoutsDirPath = config('crudgenerator.viewMasterPath');
         if (!File::isDirectory($layoutsDirPath)) {
             File::makeDirectory($layoutsDirPath);
         }
