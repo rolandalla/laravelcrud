@@ -167,9 +167,9 @@ You can customize the generator's stub **vendor/roland/crud/Commands/stubs** to 
 
 3. From the directory **/resources/backLayout/** you can modify or customize the created Master Layout.
 
-4. From the file **/routes/web.php ** you can modify or customize the created route.
+4. From the file **/routes/web.php** you can modify or customize the created route.
 
-4. From the file **/app/config/crudgenerator.php ** you can modify or customize all the needed paths.
+4. From the file **/app/config/crudgenerator.php** you can modify or customize all the needed paths.
 
 
 
