@@ -157,13 +157,21 @@ These fields are supported for migration and view's form:
 
 ### Custom Generator's Stub Template
 
-You can customize the generator's stub vendor/roland/crud/Commands/stubs to achieve your need.
+You can customize the generator's stub **vendor/roland/crud/Commands/stubs** to achieve your need.
 
 1. Make sure you've published package's assets.
     ```
     php artisan vendor:publish
     ```
 2. From the directory **/resources/backEnd/** you can modify or customize the created View files.
+
+3. From the directory **/resources/backLayout/** you can modify or customize the created Master Layout.
+
+4. From the file **/routes/web.php ** you can modify or customize the created route.
+
+4. From the file **/app/config/crudgenerator.php ** you can modify or customize all the needed paths.
+
+
 
 
 
