@@ -261,19 +261,19 @@ class CrudViewCommand extends Command
         }
 
         // For layouts/master.blade.php file
-        /*$layoutsDirPath = base_path('resources/views/layouts/');
+        $layoutsDirPath = base_path('resources/views/layouts/');
         if (!File::isDirectory($layoutsDirPath)) {
             File::makeDirectory($layoutsDirPath);
         }
 
         $layoutsFile = $this->viewDirectoryPath . 'master.blade.stub';
-        $newLayoutsFile = $layoutsDirPath . 'master.blade.php';
+        $newLayoutsFile = $layoutsDirPath . 'app.blade.php';
 
         if (!File::exists($newLayoutsFile)) {
             if (!File::copy($layoutsFile, $newLayoutsFile)) {
                 echo "failed to copy $layoutsFile...\n";
             }
-        }*/
+        }
 
         $this->info('View created successfully.');
     }

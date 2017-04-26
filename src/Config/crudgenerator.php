@@ -17,4 +17,6 @@ return [
 
     'route' => base_path('routes/web.php'),
 
+    'viewMasterPath'=>base_path('resources/views/backLayout/')
+
 ];
