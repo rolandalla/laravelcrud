@@ -1,6 +1,6 @@
 
 Laravel CRUD Generator
-
+<a href="http://www.rolandalla.com/laravel-crud-generator/">http://www.rolandalla.com/laravel-crud-generator/ </a>
 ### Requirements
     Laravel >=5.1
     PHP >= 5.5.9
