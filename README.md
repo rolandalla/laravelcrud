@@ -172,6 +172,29 @@ You can customize the generator's stub **vendor/roland/crud/Commands/stubs** to 
 4. From the file **/app/config/crudgenerator.php** you can modify or customize all the needed paths.
 
 
+### Suggestion 
+Start your project using this Laravel 5.4 Advanced Starter :
+Sentinel,
+Crud Generator,
+* Laravel 5.4.x
+* Twitter Bootstrap 3.x
+* Back-end
+    * Automatic install and setup website.
+    * User management.
+    * Role management.
+    * Dashboard.
+    * Gentelella Dashboard Ready.
+* Front-end
+    * User login, registration
+    * soon will be more...
+* Packages included:
+    * Datatables Bundle
+    * Sentinel
+    * Crud generator
+Check out: http://www.rolandalla.com/laravel-5-4-advanced-starter/
+Github: https://github.com/roladn/laravel-sentinel-crud-starter
+
+
 
 
 
