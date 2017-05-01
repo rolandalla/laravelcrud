@@ -30,8 +30,7 @@ Laravel CRUD Generator
     ```
     Your Crud Generator is Installed :)
     ```
-
-### Otional
+### Optional
 
 1. Install **laravelcollective/html** helper package if you haven't installed it already.
     * Run
