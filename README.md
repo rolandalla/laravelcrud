@@ -110,6 +110,11 @@ For view generator:
 ```
 php artisan crud:view posts --fields="title:string, body:text" --view-path="directory" --route-group=admin
 ```
+Generate Pivot tables
+
+```
+php artisan make:migration:pivot tags posts
+```
 
 By default, the generator will attempt to append the crud route to your *routes/web.php* file. If you don't want the route added, you can use the option ```--route=no```, or edit the route path on config file.
 
