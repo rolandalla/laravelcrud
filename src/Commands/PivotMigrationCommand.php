@@ -115,7 +115,7 @@ class PivotMigrationCommand extends GeneratorCommand
      */
     protected function replaceClass($stub, $name)
     {
-        $stub = str_replace('{{class}}', $name, $stub);
+        $stub = str_replace('{{class}}',$this->parseName($name), $stub);
         return $stub;
     }
     /**
