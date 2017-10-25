@@ -203,3 +203,8 @@ Github: https://github.com/roladn/laravel-sentinel-crud-starter
 
 
 
+
+## Support on Beerpay
+Hey dude! Help me out for a couple of :beers:!
+
+[![Beerpay](https://beerpay.io/roladn/laravelcrud/badge.svg?style=beer-square)](https://beerpay.io/roladn/laravelcrud)  [![Beerpay](https://beerpay.io/roladn/laravelcrud/make-wish.svg?style=flat-square)](https://beerpay.io/roladn/laravelcrud?focus=wish)
